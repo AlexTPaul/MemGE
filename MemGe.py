@@ -13,13 +13,13 @@ window1.title("MEMGE")
 window1.geometry("1284x707")
 
 # DEFINE IMAGE
-bg = PhotoImage(file="C:/Users/ALAN/AppData/Local/Programs/Python/Python310/title.png")
+bg = PhotoImage(file="title.png")
 
 # BACKGROUND MUSIC
 pygame.init()
 
 pygame.mixer.init()
-mixer.music.load("C:/Users/ALAN/AppData/Local/Programs/Python/Python310/title-_AudioTrimmer.com_-_1_.wav")
+mixer.music.load("title-_AudioTrimmer.com_-_1_.wav")
 mixer.music.play(-1)
 
 # CREATE CANVAS
@@ -36,7 +36,7 @@ my_canvas.create_text(770, 300, text="MemGE", font=("Jokerman", 70), fill="grey"
 my_canvas.create_text(770, 400, text="Memory Game for everyone", font=("Jokerman", 20), fill="grey")
 
 # FUNCTION TO EXIT GAME
-def quit(event):
+def quit(event=None):
     mixer.music.stop()
     window1.destroy()
 
@@ -47,7 +47,7 @@ answer_dict = {}
 moves = 0
 
 # FUNCTION TO START GAME
-def game(event):
+def game(event=None):
     mixer.music.stop()
     window = Tk()
     window.title("MEMGE")
@@ -101,7 +101,7 @@ def game(event):
     def win():
         global moves
         my_label.config(text="CONGRATULATIONS! YOU WON")
-        mixer.music.load("C:/Users/ALAN/AppData/Local/Programs/Python/Python310/gaming-sound-effect-hd.mp3")
+        mixer.music.load("gaming-sound-effect-hd.mp3")
         mixer.music.play(2)
         moves_label.config(text=moves)
         button_list = [b0, b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11]
@@ -116,27 +116,27 @@ def game(event):
             moves += 1
             if matches[number] == 1:
                 playsound(
-                    "C:/Users/ALAN/AppData/Local/Programs/Python/Python310/8d82b5_The_Number_1_Sound_Effect.mp3")
+                    "8d82b5_The_Number_1_Sound_Effect.mp3")
 
             if matches[number] == 2:
                 playsound(
-                    "C:/Users/ALAN/AppData/Local/Programs/Python/Python310/8d82b5_The_Number_2_Sound_Effect.mp3")
+                    "8d82b5_The_Number_2_Sound_Effect.mp3")
 
             if matches[number] == 3:
                 playsound(
-                    "C:/Users/ALAN/AppData/Local/Programs/Python/Python310/8d82b5_The_Number_3_Sound_Effect.mp3")
+                    "8d82b5_The_Number_3_Sound_Effect.mp3")
 
             if matches[number] == 4:
                 playsound(
-                    "C:/Users/ALAN/AppData/Local/Programs/Python/Python310/8d82b5_The_Number_4_Sound_Effect.mp3")
+                    "8d82b5_The_Number_4_Sound_Effect.mp3")
 
             if matches[number] == 5:
                 playsound(
-                    "C:/Users/ALAN/AppData/Local/Programs/Python/Python310/8d82b5_The_Number_5_Sound_Effect.mp3")
+                    "8d82b5_The_Number_5_Sound_Effect.mp3")
 
             if matches[number] == 6:
                 playsound(
-                    "C:/Users/ALAN/AppData/Local/Programs/Python/Python310/8d82b5_The_Number_6_Sound_Effect.mp3")
+                    "8d82b5_The_Number_6_Sound_Effect.mp3")
 
             print(matches[number])
             answer_list.append(number)
@@ -147,7 +147,7 @@ def game(event):
         if len(answer_list) == 2:
             if matches[answer_list[0]] == matches[answer_list[1]]:
                 my_label.config(text="MATCH")
-                playsound("C:/Users/ALAN/AppData/Local/Programs/Python/Python310/win-applause-game-sound-fx.mp3")
+                playsound("win-applause-game-sound-fx.mp3")
 
                 for key in answer_dict:
                     key["state"] = "disabled"
@@ -163,7 +163,7 @@ def game(event):
                 my_label.config(text="NOT MATCHED")
                 count = 0
                 answer_list = []
-                playsound("C:/Users/ALAN/Downloads/error-notification-banjo-45430.mp3")
+                playsound("error-notification-banjo-45430.mp3")
 
                 messagebox.showinfo("Incorrect!", "Incorrect")
                 for key in answer_dict:
@@ -253,6 +253,4 @@ button2 = Button(window1, text="PRESS ESC TO EXIT GAME", width=24, height=2, com
 button1_canvas = my_canvas.create_window(560, 500, anchor="nw", window=button1)
 button2_canvas = my_canvas.create_window(790, 500, anchor="nw", window=button2)
 
-
-
-
+window1.mainloop()
