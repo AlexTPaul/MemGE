@@ -115,28 +115,22 @@ def game(event=None):
             b["text"] = matches[number]
             moves += 1
             if matches[number] == 1:
-                playsound(
-                    "8d82b5_The_Number_1_Sound_Effect.mp3")
+                playsound("8d82b5_The_Number_1_Sound_Effect.mp3")
 
             if matches[number] == 2:
-                playsound(
-                    "8d82b5_The_Number_2_Sound_Effect.mp3")
+                playsound("8d82b5_The_Number_2_Sound_Effect.mp3")
 
             if matches[number] == 3:
-                playsound(
-                    "8d82b5_The_Number_3_Sound_Effect.mp3")
+                playsound("8d82b5_The_Number_3_Sound_Effect.mp3")
 
             if matches[number] == 4:
-                playsound(
-                    "8d82b5_The_Number_4_Sound_Effect.mp3")
+                playsound("8d82b5_The_Number_4_Sound_Effect.mp3")
 
             if matches[number] == 5:
-                playsound(
-                    "8d82b5_The_Number_5_Sound_Effect.mp3")
+                playsound("8d82b5_The_Number_5_Sound_Effect.mp3")
 
             if matches[number] == 6:
-                playsound(
-                    "8d82b5_The_Number_6_Sound_Effect.mp3")
+                playsound("8d82b5_The_Number_6_Sound_Effect.mp3")
 
             print(matches[number])
             answer_list.append(number)
